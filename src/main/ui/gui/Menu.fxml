@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="601.0" prefWidth="539.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.gui.Controller">
+   <children>
+      <AnchorPane fx:id="power" layoutY="92.0" prefHeight="509.0" prefWidth="539.0" style="-fx-background-color: #3D4956;">
+         <children>
+            <Text fill="WHITE" layoutX="40.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thanks for using TravelApp!">
+               <font>
+                  <Font name="Century Gothic Bold" size="36.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="162.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Happy Safe Travels!">
+               <font>
+                  <Font name="Century Gothic Bold" size="24.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="110.0" fitWidth="80.0" layoutX="230.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+               <image>
+                  <Image url="@../images/plane.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="123.0" fitWidth="80.0" layoutX="219.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true" rotate="18.4">
+               <image>
+                  <Image url="@../images/star.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="topbar" prefHeight="83.0" prefWidth="539.0" style="-fx-background-color: #3D4956;">
+         <children>
+            <Button fx:id="currencyExchangeButton" layoutX="21.0" layoutY="36.0" mnemonicParsing="false" onMousePressed="#handleButtonAction" text="Rates" />
+            <Button fx:id="placesToEatButton" layoutX="99.0" layoutY="36.0" mnemonicParsing="false" onMousePressed="#handleButtonAction" text="PlacesToEat" />
+            <Button fx:id="activitiesButton" layoutX="218.0" layoutY="36.0" mnemonicParsing="false" onMousePressed="#handleButtonAction" text="Activities" />
+            <Button fx:id="sightSeeingButton" layoutX="317.0" layoutY="36.0" mnemonicParsing="false" onMousePressed="#handleButtonAction" text="Sight Seeing" />
+            <Button fx:id="powerButton" layoutX="443.0" layoutY="36.0" mnemonicParsing="false" onMousePressed="#handleButtonAction" text="Finished" />
+            <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="29.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/currencyExchange.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="130.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/placesToEat.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="241.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/activities.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="344.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/sightSeeing.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="455.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/power.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="sightSeeing" layoutY="92.0" prefHeight="509.0" prefWidth="539.0" style="-fx-background-color: #3D4956;">
+         <children>
+            <Text fill="WHITE" layoutX="77.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here is your list of sight seeing Places:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="ssAddButton" layoutX="413.0" layoutY="400.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="Add" />
+            <Button fx:id="ssRemoveButton" layoutX="410.0" layoutY="450.0" mnemonicParsing="false" text="Remove" />
+            <TextField fx:id="ssText" layoutX="72.0" layoutY="400.0" prefHeight="37.0" prefWidth="206.0" promptText="Sight Seeing Place" />
+            <TextField fx:id="ssDateText" layoutX="298.0" layoutY="400.0" prefHeight="37.0" prefWidth="100.0" promptText="Date" />
+            <TextField fx:id="ssDetailText" layoutX="70.0" layoutY="450.0" prefHeight="37.0" prefWidth="327.0" promptText="Details" />
+            <TableView fx:id="ssTable" layoutX="72.0" layoutY="63.0" prefHeight="326.0" prefWidth="403.0">
+              <columns>
+                <TableColumn fx:id="ssPlaceColumn" prefWidth="139.0" text="Place" />
+                <TableColumn fx:id="ssDateColumn" prefWidth="111.0" text="Date" />
+                  <TableColumn fx:id="ssDetailColumn" prefWidth="152.0" text="Details" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="activities" layoutY="92.0" prefHeight="509.0" prefWidth="539.0" style="-fx-background-color: #3D4956;">
+         <children>
+            <Text fill="WHITE" layoutX="107.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here is your list of activities:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="acAddButton" layoutX="413.0" layoutY="400.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="Add" />
+            <Button fx:id="acRemoveButton" layoutX="410.0" layoutY="450.0" mnemonicParsing="false" text="Remove" />
+            <TextField fx:id="acText" layoutX="72.0" layoutY="400.0" prefHeight="37.0" prefWidth="206.0" promptText="Activities" />
+            <TextField fx:id="acDateText" layoutX="298.0" layoutY="400.0" prefHeight="37.0" prefWidth="100.0" promptText="Date" />
+            <TextField fx:id="acDetailText" layoutX="70.0" layoutY="450.0" prefHeight="37.0" prefWidth="327.0" promptText="Details" />
+            <TableView fx:id="acTable" layoutX="72.0" layoutY="63.0" prefHeight="326.0" prefWidth="403.0">
+              <columns>
+                <TableColumn fx:id="acActivityColumn" prefWidth="139.0" text="Activity" />
+                <TableColumn fx:id="acDateColumn" prefWidth="111.0" text="Date" />
+                  <TableColumn fx:id="acDetailColumn" prefWidth="152.0" text="Details" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="placesToEat" layoutY="92.0" prefHeight="509.0" prefWidth="539.0" style="-fx-background-color: #3D4956;">
+         <children>
+            <Text fx:id="listText" fill="WHITE" layoutX="107.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here is your list of places to eat:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="pteAddButton" layoutX="413.0" layoutY="400.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="Add" />
+            <Button fx:id="pteRemoveButton" layoutX="410.0" layoutY="450.0" mnemonicParsing="false" text="Remove" />
+            <TextField fx:id="pteText" layoutX="72.0" layoutY="400.0" prefHeight="37.0" prefWidth="206.0" promptText="Place to Eat" />
+            <TextField fx:id="pteDateText" layoutX="298.0" layoutY="400.0" prefHeight="37.0" prefWidth="100.0" promptText="Date" />
+            <TextField fx:id="pteDetailText" layoutX="70.0" layoutY="450.0" prefHeight="37.0" prefWidth="327.0" promptText="Details" />
+            <TableView fx:id="pteTable" layoutX="72.0" layoutY="63.0" prefHeight="326.0" prefWidth="403.0">
+              <columns>
+                <TableColumn fx:id="ptePlaceColumn" prefWidth="139.0" text="Place" />
+                <TableColumn fx:id="pteDateColumn" prefWidth="111.0" text="Date" />
+                  <TableColumn fx:id="pteDetailColumn" prefWidth="152.0" text="Details" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="currencyExchange" layoutY="92.0" prefHeight="509.0" prefWidth="539.0" style="-fx-background-color: #3D4956;">
+         <children>
+            <Text fill="WHITE" layoutX="81.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here are the current Exchange rates:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <TableView fx:id="ratesTable" layoutX="73.0" layoutY="68.0" prefHeight="384.0" prefWidth="403.0">
+              <columns>
+                <TableColumn fx:id="currencyColumn" prefWidth="204.0" text="Currency" />
+                <TableColumn fx:id="ratesColumn" prefWidth="198.0" text="Rates" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="home" layoutY="-1.0" prefHeight="601.0" prefWidth="539.0" style="-fx-background-color: #3D4956;">
+         <children>
+            <TextField layoutX="98.0" layoutY="236.0" prefHeight="37.0" prefWidth="239.0" promptText="Destination">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button fx:id="submitButton" layoutX="342.0" layoutY="236.0" mnemonicParsing="false" onMousePressed="#handleButtonAction" prefHeight="37.0" prefWidth="86.0" text="Submit" />
+            <Text fill="WHITE" layoutX="98.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter your destination!">
+               <font>
+                  <Font name="Century Gothic" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="welcomeText" fill="WHITE" layoutX="66.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to TravelApp!">
+               <font>
+                  <Font name="Century Gothic Bold" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
